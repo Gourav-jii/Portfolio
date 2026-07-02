@@ -7,10 +7,24 @@ const Experience = () => {
   const experienceData = [
     {
       title: 'Full Stack & AI Automation Intern',
-      organization: 'Izzki Tech Solution PVT.LTD',
+      organization: 'Izzki Tech Solution Pvt. Ltd.',
       duration: '26 May 2026 - 30 June 2026',
-      desc: 'As an AI Automation Intern, I developed an AI Automation-based Resume Parsing & Candidate Shortlisting System, alongside an AI Medical-Healthcare Chatbot.',
-      tags: ['AI Automation', 'React', 'Node.js', 'Resume Parser', 'Healthcare AI'],
+      desc: (
+        <div className="space-y-3">
+          <p className="text-[#8b85a3]">Designed and built two production-ready AI-powered applications from scratch:</p>
+          <ul className="space-y-2.5 list-none pl-0">
+            <li className="flex items-start gap-2 text-xs">
+              <span className="text-neon-pink font-bold mt-0.5">»</span>
+              <span className="text-slate-300"><strong className="text-white">AI Resume Screening & Shortlisting:</strong> Built a bulk resume parser and ATS compatibility evaluator using a React/Express stack and n8n workflow automations to streamline recruitment.</span>
+            </li>
+            <li className="flex items-start gap-2 text-xs">
+              <span className="text-neon-pink font-bold mt-0.5">»</span>
+              <span className="text-slate-300"><strong className="text-white">HealFlow AI Healthcare Chatbot:</strong> Developed a patient care portal featuring an AI symptom checker chatbot, medicine database, and live doctor appointment scheduling system.</span>
+            </li>
+          </ul>
+        </div>
+      ),
+      tags: ['AI Automation', 'React', 'Node.js', 'n8n Workflows', 'MongoDB', 'Healthcare AI'],
     },
 
     // Add more work experience here
@@ -79,9 +93,9 @@ const Experience = () => {
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-slate-300 leading-relaxed mb-6 flex-grow relative z-10">
+                <div className="text-xs text-slate-300 leading-relaxed mb-6 flex-grow relative z-10">
                   {item.desc}
-                </p>
+                </div>
 
                 {/* Skill tags */}
                 <div className="flex flex-wrap gap-1.5 border-t border-white/5 pt-4 mt-auto relative z-10">
