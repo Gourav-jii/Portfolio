@@ -56,7 +56,7 @@ const Projects = () => {
       features: ['Interactive Starfield Constellations', '3D Mouse-Tracking Glow Effects', 'macOS-style App Window Mockups', 'Fully Indexed SEO Setup & Site Map'],
       badges: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'PostCSS'],
       github: 'https://github.com/Gourav-jii/Portfolio',
-      demo: 'https://gouravswarnkar.com/',
+      demo: 'https://portfolio-g2yz.onrender.com/',
       image: '/portfolio-ss.png',
       glowColor: 'rgba(0, 242, 254, 0.18)',
       accentGrad: 'from-neon-cyan via-neon-purple to-transparent',
