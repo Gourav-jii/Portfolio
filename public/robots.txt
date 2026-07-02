@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gourav-swarnkar.onrender.com/sitemap.xml
+Sitemap: https://gouravswarnkar.onrender.com/sitemap.xml
