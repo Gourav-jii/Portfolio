@@ -13,20 +13,57 @@ const Contact = () => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
     setStatus({ text: 'ESTABLISHING HANDSHAKE CONTEXT...', type: 'info' });
 
-    setTimeout(() => {
-      setStatus({ text: 'TRANSMISSION RECEIVED SUCCESSFULLY. COMM CHANNEL SECURED.', type: 'success' });
-      setForm({ name: '', email: '', subject: '', message: '' });
-      setSubmitting(false);
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || "";
 
+    if (!accessKey) {
+      setStatus({ 
+        text: 'ERROR: KEY CONFIGURATION MISSING. PLEASE ADD VITE_WEB3FORMS_KEY TO YOUR .ENV FILE.', 
+        type: 'error' 
+      });
+      setSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+          from_name: `${form.name} (Portfolio)`,
+          subject_line: `New Portfolio Message: ${form.subject}`
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus({ text: 'TRANSMISSION RECEIVED SUCCESSFULLY. COMM CHANNEL SECURED.', type: 'success' });
+        setForm({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus({ text: `TRANSMISSION FAILED: ${data.message || 'Unknown Error'}`, type: 'error' });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setStatus({ text: 'TRANSMISSION TERMINATED: SERVER CONNECTIVITY LOST.', type: 'error' });
+    } finally {
+      setSubmitting(false);
       setTimeout(() => {
         setStatus({ text: '', type: '' });
-      }, 5000);
-    }, 2000);
+      }, 6000);
+    }
   };
 
   return (
@@ -120,8 +157,13 @@ const Contact = () => {
               </button>
 
               {status.text && (
-                <div className={`text-xs font-orbitron mt-2 ${status.type === 'success' ? 'text-[#00ff66] drop-shadow-[0_0_5px_#00ff66]' : 'text-neon-cyan'
-                  }`}>
+                <div className={`text-xs font-orbitron mt-2 ${
+                  status.type === 'success' 
+                    ? 'text-[#00ff66] drop-shadow-[0_0_5px_#00ff66]' 
+                    : status.type === 'error' 
+                      ? 'text-[#ff3333] drop-shadow-[0_0_5px_#ff3333]' 
+                      : 'text-neon-cyan'
+                }`}>
                   {status.text}
                 </div>
               )}

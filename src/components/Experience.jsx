@@ -37,7 +37,7 @@ const Experience = () => {
         </div>
 
         {/* Experience Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {experienceData.map((item, index) => (
             <motion.div
               key={index}
@@ -45,7 +45,7 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: index * 0.12 }}
-              className="w-full h-full flex"
+              className="w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-22px)] max-w-md flex"
             >
               <GlowCard
                 glowColor="rgba(254, 8, 181, 0.15)"
