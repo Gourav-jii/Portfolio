@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #08131f;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08131f;
+}
+::-webkit-scrollbar-thumb {
+  background: #7f00ff;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f2fe;
+}
