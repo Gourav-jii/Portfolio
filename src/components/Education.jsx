@@ -41,7 +41,7 @@ const Education = () => {
       status: 'Completed',
       desc: 'Completed secondary school education achieving an impressive 90.80% marks under the JAC board with distinction.',
       tags: ['Secondary Education', 'JAC Board'],
-      grade: '90.8%',
+      grade: '90.80%',
       accentFrom: 'from-neon-purple',
       accentTo: 'to-neon-cyan',
       hoverBorder: 'hover:border-neon-purple/30 hover:shadow-[0_0_20px_rgba(127,0,255,0.1)]',

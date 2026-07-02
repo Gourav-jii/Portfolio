@@ -17,7 +17,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'AI Interview Agent',
-      desc: 'I built a production-ready AI Interview Agent using the MERN Stack. It automates candidate interviewing with interactive voice sessions, real-time feedback, and behavioral response grading.',
+      desc: 'I built a production-ready AI Interview Agent using the MERN Stack. This project teaches real-world SaaS architecture, backend structuring, authentication, payments integration, and production deployment.',
       features: ['AI Interview Simulator', 'Speech Analysis & Transcription', 'MERN Stack Architecture', 'Scalable Candidate Dashboard'],
       badges: ['MongoDB', 'Express.js', 'React', 'Node.js', 'OpenAI API'],
       github: 'https://github.com/Gourav-jii/interviewIQ',
@@ -28,7 +28,7 @@ const Projects = () => {
   return (
     <section id="projects" className="relative py-24 px-[6%] bg-space-deep">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="font-orbitron text-xs font-semibold tracking-widest text-neon-cyan uppercase mb-2 block">
@@ -50,16 +50,16 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="w-full max-w-md"
             >
-              <GlowCard 
+              <GlowCard
                 glowColor="rgba(0, 242, 254, 0.15)"
                 className="flex flex-col w-full h-full overflow-hidden group clickable"
               >
                 {/* Image Holder with static reference */}
                 <div className="w-full h-48 overflow-hidden border-b border-white/5 relative">
-                  <img 
-                    src={projectImage} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  <img
+                    src={projectImage}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
 
@@ -68,7 +68,7 @@ const Projects = () => {
                   <h3 className="font-orbitron font-bold text-white text-lg tracking-wide mb-2 group-hover:text-neon-cyan transition-colors duration-300">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-xs text-[#8b85a3] leading-relaxed mb-4 flex-grow">
                     {project.desc}
                   </p>
@@ -86,8 +86,8 @@ const Projects = () => {
                   {/* Badges */}
                   <div className="flex flex-wrap gap-2 mb-5">
                     {project.badges.map((badge, bIndex) => (
-                      <span 
-                        key={bIndex} 
+                      <span
+                        key={bIndex}
                         className="font-orbitron text-[9px] font-semibold tracking-wider bg-white/2 border border-white/5 text-[#8b85a3] px-2.5 py-1 rounded-md"
                       >
                         {badge}
@@ -97,17 +97,17 @@ const Projects = () => {
 
                   {/* Matching Premium Action Buttons */}
                   <div className="flex gap-4 border-t border-white/5 pt-4">
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
+                    <a
+                      href={project.github}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex-grow py-2.5 rounded-xl bg-neon-purple hover:bg-transparent text-white hover:text-neon-cyan border border-neon-purple hover:border-neon-cyan hover:shadow-purple-glow text-xs font-orbitron font-semibold tracking-wider transition-all duration-300 flex justify-center items-center gap-2 clickable"
                     >
                       <FaGithub size={14} /> GitHub
                     </a>
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
+                    <a
+                      href={project.demo}
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="flex-grow py-2.5 rounded-xl bg-neon-cyan hover:bg-transparent text-space-dark hover:text-neon-cyan border border-neon-cyan hover:border-neon-cyan hover:shadow-cyan-glow text-xs font-orbitron font-semibold tracking-wider transition-all duration-300 flex justify-center items-center gap-2 clickable"
                     >
