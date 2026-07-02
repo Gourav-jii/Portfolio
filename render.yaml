@@ -1,5 +1,6 @@
 services:
-  - type: static
+  - type: web
     name: portfolio
+    runtime: static
     buildCommand: npm run build
-    publishDir: dist
+    staticPublishPath: dist
