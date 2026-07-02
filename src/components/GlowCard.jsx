@@ -43,8 +43,14 @@ const GlowCard = ({ children, className = '', glowColor = 'rgba(0, 242, 254, 0.1
         scale: isHovered ? 1.02 : 1,
       }}
       transition={{ type: 'spring', stiffness: 220, damping: 22, mass: 0.5 }}
-      style={{ transformStyle: 'preserve-3d', perspective: 1000 }}
-      className={`relative overflow-hidden rounded-2xl border border-white/5 bg-[#0a1524]/40 backdrop-blur-md transition-all duration-300 ${className}`}
+      style={{ 
+        transformStyle: 'preserve-3d', 
+        perspective: 1000,
+        backfaceVisibility: 'hidden',
+        WebkitBackfaceVisibility: 'hidden',
+        willChange: 'transform'
+      }}
+      className={`relative overflow-hidden rounded-2xl border border-white/5 bg-[#0a1524]/40 backdrop-blur-md transition-all duration-300 [transform:translateZ(0)] ${className}`}
     >
       {/* Glowing spotlight following mouse */}
       {isHovered && (

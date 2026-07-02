@@ -126,6 +126,7 @@ const Projects = () => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover object-top group-hover:scale-108 transition-transform duration-700 ease-out"
+                      style={{ imageRendering: '-webkit-optimize-contrast' }}
                     />
                   </div>
                 </div>
