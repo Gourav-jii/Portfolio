@@ -49,6 +49,21 @@ const Projects = () => {
       titleHover: 'group-hover:text-neon-pink',
       githubBtn: 'border-white/10 hover:border-neon-pink hover:text-neon-pink hover:shadow-pink-glow text-white/70 bg-white/2 hover:bg-neon-pink/5',
       demoBtn: 'bg-neon-pink hover:bg-transparent text-white hover:text-neon-pink border border-neon-pink hover:border-neon-pink hover:shadow-pink-glow',
+    },
+    {
+      title: 'Creative Space Portfolio',
+      desc: 'A premium, interactive personal portfolio website designed with custom scrolling starfield constellations, dynamic mouse-tracking 3D glow cards, and macOS-style app windows. Fully optimized with structured SEO schemas.',
+      features: ['Interactive Starfield Constellations', '3D Mouse-Tracking Glow Effects', 'macOS-style App Window Mockups', 'Fully Indexed SEO Setup & Site Map'],
+      badges: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'PostCSS'],
+      github: 'https://github.com/Gourav-jii/Portfolio',
+      demo: 'https://gouravswarnkar.com/',
+      image: '/portfolio-ss.png',
+      glowColor: 'rgba(0, 242, 254, 0.18)',
+      accentGrad: 'from-neon-cyan via-neon-purple to-transparent',
+      dotBg: 'bg-neon-cyan shadow-[0_0_8px_rgba(0,242,254,0.5)]',
+      titleHover: 'group-hover:text-neon-cyan',
+      githubBtn: 'border-white/10 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-cyan-glow text-white/70 bg-white/2 hover:bg-neon-cyan/5',
+      demoBtn: 'bg-neon-cyan hover:bg-transparent text-space-dark hover:text-neon-cyan border border-neon-cyan hover:border-neon-cyan hover:shadow-cyan-glow',
     }
   ];
 
@@ -72,7 +87,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto justify-items-center">
           {projects.map((project, index) => (
             <motion.div
               key={index}
