@@ -40,7 +40,7 @@ const Hero = () => {
   const words = ["Full Stack Developer", "MERN Stack Developer", "AI Enthusiast"];
   const typedText = useTyping(words);
   const [hasProfilePic, setHasProfilePic] = useState(false);
-  
+
 
 
   // Check if profile.png exists in the public directory
@@ -70,14 +70,14 @@ const Hero = () => {
           <span className="font-orbitron text-sm font-semibold tracking-widest text-neon-cyan mb-2 uppercase">
             Hello, It's Me
           </span>
-          <h1 className="font-orbitron font-extrabold text-white text-5xl md:text-7xl leading-tight tracking-wide mb-3 drop-shadow-[0_4px_12px_rgba(255,255,255,0.05)]">
-            Gourav Swarnkar
+          <h1 className="font-orbitron font-extrabold text-4xl sm:text-5xl md:text-7xl leading-tight tracking-wide mb-3 drop-shadow-[0_4px_12px_rgba(255,255,255,0.05)]">
+            <span className="bg-gradient-to-r from-white via-slate-100 to-neon-cyan bg-clip-text text-transparent">Gourav Swarnkar</span>
           </h1>
           <h3 className="font-orbitron text-xl md:text-3xl font-bold text-white mb-6">
             I am a <span className="text-neon-cyan border-r-2 border-neon-cyan animate-pulse pr-1 drop-shadow-[0_0_8px_rgba(0,242,254,0.6)]">{typedText}</span>
           </h3>
 
-          <p className="text-sm md:text-base text-[#8b85a3] max-w-lg mb-8 leading-relaxed">
+          <p className="text-sm md:text-base text-slate-400 max-w-lg mb-8 leading-relaxed">
             I build modern web applications, AI-powered systems, and IoT-based solutions with clean UI, scalable backend architecture, and real-world problem-solving.
           </p>
 
@@ -126,13 +126,13 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex justify-center items-center relative"
         >
-          <div className="w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full p-[3px] bg-gradient-to-tr from-neon-cyan via-neon-purple to-neon-pink shadow-dual-glow flex justify-center items-center">
-            <div className="w-full h-full rounded-full bg-space-dark overflow-hidden flex justify-center items-center">
+          <div className="w-[280px] h-[280px] md:w-[360px] md:h-[360px] rounded-full p-[3px] bg-gradient-to-tr from-neon-cyan/35 via-neon-purple/20 to-neon-pink/35 shadow-dual-glow flex justify-center items-center relative group overflow-hidden cursor-pointer">
+            <div className="w-full h-full rounded-full bg-space-dark overflow-hidden flex justify-center items-center relative">
               {hasProfilePic ? (
                 <img
                   src="/profile.png"
                   alt="Gourav Swarnkar Profile"
-                  className="w-[96%] h-[96%] object-cover rounded-full"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                 />
               ) : (
                 /* Custom Astronaut SVG Logo Graphic */
@@ -148,6 +148,8 @@ const Hero = () => {
                   <circle cx="53" cy="83" r="1.5" fill="#00f2fe" />
                 </svg>
               )}
+              {/* Glass Sweeping light reflection effect on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out pointer-events-none z-10" />
             </div>
           </div>
         </motion.div>

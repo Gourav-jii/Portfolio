@@ -140,7 +140,7 @@ const Contact = () => {
               Connect Details
             </h3>
 
-            <p className="text-sm text-[#8b85a3] leading-relaxed mb-8">
+            <p className="text-sm text-slate-400 leading-relaxed mb-8">
               Feel free to reach out for collaboration opportunities, project queries, or just to chat about web technologies and IoT.
             </p>
 
@@ -150,8 +150,8 @@ const Contact = () => {
                   <FiMail size={18} />
                 </div>
                 <div>
-                  <h5 className="font-orbitron text-[10px] text-[#5c5770] tracking-wider uppercase mb-0.5">Email</h5>
-                  <p className="text-sm text-[#8b85a3]">swarnkargourav123@gmail.com</p>
+                  <h5 className="font-orbitron text-[10px] text-slate-500 tracking-wider uppercase mb-0.5">Email</h5>
+                  <p className="text-sm text-slate-400">swarnkargourav123@gmail.com</p>
                 </div>
               </div>
 
@@ -160,8 +160,8 @@ const Contact = () => {
                   <FiPhone size={18} />
                 </div>
                 <div>
-                  <h5 className="font-orbitron text-[10px] text-[#5c5770] tracking-wider uppercase mb-0.5">Phone</h5>
-                  <p className="text-sm text-[#8b85a3]">+91 9234228009</p>
+                  <h5 className="font-orbitron text-[10px] text-slate-500 tracking-wider uppercase mb-0.5">Phone</h5>
+                  <p className="text-sm text-slate-400">+91 9234228009</p>
                 </div>
               </div>
 
@@ -170,8 +170,8 @@ const Contact = () => {
                   <FiMapPin size={18} />
                 </div>
                 <div>
-                  <h5 className="font-orbitron text-[10px] text-[#5c5770] tracking-wider uppercase mb-0.5">Location</h5>
-                  <p className="text-sm text-[#8b85a3]">Jamshedpur, India</p>
+                  <h5 className="font-orbitron text-[10px] text-slate-500 tracking-wider uppercase mb-0.5">Location</h5>
+                  <p className="text-sm text-slate-400">Jamshedpur, India</p>
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@ const Contact = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/10 flex justify-center items-center text-[#8b85a3] hover:text-neon-cyan hover:border-neon-cyan hover:shadow-cyan-glow bg-white/2 hover:bg-neon-cyan/5 transition-all duration-300 clickable"
+                  className="w-10 h-10 rounded-full border border-white/10 flex justify-center items-center text-slate-400 hover:text-neon-cyan hover:border-neon-cyan hover:shadow-cyan-glow bg-white/2 hover:bg-neon-cyan/5 transition-all duration-300 clickable"
                 >
                   {social.icon}
                 </a>

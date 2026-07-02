@@ -28,7 +28,7 @@ const About = () => {
           className="flex justify-center items-center relative"
         >
           <div 
-            className="w-[320px] h-[320px] md:w-[400px] md:h-[400px] rounded-2xl border border-white/5 bg-[#0a1524]/40 relative flex justify-center items-center overflow-hidden shadow-dual-glow group"
+            className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px] rounded-2xl border border-white/5 bg-[#0a1524]/40 relative flex justify-center items-center overflow-hidden shadow-dual-glow group"
           >
             {hasAboutPic ? (
               <img 
@@ -77,7 +77,7 @@ const About = () => {
             About Gourav Swarnkar
           </h2>
 
-          <div className="flex flex-col gap-6 text-[#8b85a3] text-sm md:text-base leading-relaxed">
+          <div className="flex flex-col gap-6 text-slate-300 text-sm md:text-base leading-relaxed">
             <p>
               I am a creative full-stack developer committed to creating interactive, robust, and visually stunning web systems. Over the years, I've built solutions integrating AI-driven metrics, IoT dashboards, and responsive frontends.
             </p>
@@ -87,7 +87,7 @@ const About = () => {
                 <h4 className="font-orbitron font-semibold text-white text-xs tracking-wider uppercase mb-2 text-neon-cyan">
                   Education
                 </h4>
-                <p className="text-xs text-[#8b85a3] leading-relaxed">
+                <p className="text-xs text-slate-400 leading-relaxed">
                   Bachelor of Technology (B.Tech) in Computer Science & Engineering. Solid grounding in algorithms, databases, and network graphics.
                 </p>
               </div>
@@ -96,7 +96,7 @@ const About = () => {
                 <h4 className="font-orbitron font-semibold text-white text-xs tracking-wider uppercase mb-2 text-neon-purple">
                   Experience
                 </h4>
-                <p className="text-xs text-[#8b85a3] leading-relaxed">
+                <p className="text-xs text-slate-400 leading-relaxed">
                   Hands-on developer internship experience building responsive React components, 3D WebGL modules, and high-performance server configurations.
                 </p>
               </div>
@@ -114,7 +114,7 @@ const About = () => {
                   <h4 className="font-orbitron font-semibold text-white text-xs tracking-wider uppercase mb-2 text-neon-pink">
                     My Passion
                   </h4>
-                  <p className="text-xs text-[#8b85a3] leading-relaxed">
+                  <p className="text-xs text-slate-400 leading-relaxed">
                     I thrive on building bridges between technical systems and user aesthetics. My passion is pushing the boundaries of what browser engines can do, deploying WebGL interfaces, smart automation pipelines, and IoT analytics integrations to solve complex problems.
                   </p>
                 </motion.div>
@@ -123,7 +123,7 @@ const About = () => {
 
             <button 
               onClick={() => setExpanded(!expanded)} 
-              className="mt-4 align-self-start self-start px-6 py-2.5 rounded-full border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/5 font-orbitron text-xs font-semibold tracking-wider transition-all duration-300 clickable"
+              className="mt-4 align-self-start self-start px-6 py-2.5 rounded-full border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/5 font-orbitron text-xs font-semibold tracking-wider transition-all duration-300 clickable cursor-pointer"
             >
               {expanded ? 'Show Less' : 'Read More'}
             </button>

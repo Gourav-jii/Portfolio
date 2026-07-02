@@ -14,8 +14,8 @@ export default {
         'neon-pink': '#fe08b5',
       },
       fontFamily: {
-        orbitron: ['Orbitron', 'sans-serif'],
-        sans: ['Space Grotesk', 'sans-serif'],
+        orbitron: ['Outfit', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
       },
       boxShadow: {
         'cyan-glow': '0 0 20px rgba(0, 242, 254, 0.35)',

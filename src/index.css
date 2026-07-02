@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+@theme {
+  --font-orbitron: "Outfit", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -9,7 +14,7 @@ body {
   background-color: #08131f;
   color: #ffffff;
   overflow-x: hidden;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Custom Scrollbar Styles */

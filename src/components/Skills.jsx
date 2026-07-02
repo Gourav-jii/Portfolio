@@ -92,7 +92,7 @@ const Skills = () => {
                           <div className="p-1.5 rounded-lg bg-white/2 border border-white/5 group-hover/skill:scale-110 transition-transform duration-200 flex justify-center items-center">
                             {skill.icon}
                           </div>
-                          <span className="font-orbitron text-xs font-semibold text-[#8b85a3] tracking-wide group-hover/skill:text-white transition-colors duration-200">
+                          <span className="font-orbitron text-xs font-semibold text-slate-400 tracking-wide group-hover/skill:text-white transition-colors duration-200">
                             {skill.name}
                           </span>
                         </div>

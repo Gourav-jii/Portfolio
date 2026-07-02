@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBriefcase } from 'react-icons/fa';
+import GlowCard from './GlowCard';
 
 const Experience = () => {
   const experienceData = [
@@ -11,6 +12,7 @@ const Experience = () => {
       desc: 'As an AI Automation Intern, I developed an AI Automation-based Resume Parsing & Candidate Shortlisting System, alongside an AI Medical-Healthcare Chatbot.',
       tags: ['AI Automation', 'React', 'Node.js', 'Resume Parser', 'Healthcare AI'],
     },
+
     // Add more work experience here
   ];
 
@@ -34,55 +36,65 @@ const Experience = () => {
           </p>
         </div>
 
-        {/* Experience Cards */}
-        <div className="flex flex-col gap-8 max-w-3xl mx-auto">
+        {/* Experience Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {experienceData.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative p-6 bg-[#0a1524]/30 border border-white/5 rounded-2xl text-left hover:border-neon-pink/30 hover:shadow-[0_0_20px_rgba(254,8,181,0.1)] transition-all duration-300 group"
+              transition={{ duration: 0.6, delay: index * 0.12 }}
+              className="w-full h-full flex"
             >
-              {/* Left accent bar */}
-              <div className="absolute left-0 top-6 bottom-6 w-[3px] bg-gradient-to-b from-neon-pink to-neon-purple rounded-full group-hover:shadow-[0_0_8px_#fe08b5] transition-all duration-300" />
+              <GlowCard
+                glowColor="rgba(254, 8, 181, 0.15)"
+                className="group relative p-6 w-full flex flex-col text-left overflow-hidden clickable bg-[#09111e]/40 border border-white/5 rounded-3xl"
+              >
+                {/* Cyber Grid Background Pattern */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(254,8,181,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(254,8,181,0.02)_1px,transparent_1px)] bg-[size:24px_24px] opacity-35 group-hover:opacity-70 transition-opacity duration-500 pointer-events-none" />
 
-              <div className="pl-5">
-                {/* Header row */}
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
-                  <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-neon-pink/10 border border-neon-pink/20 flex justify-center items-center text-neon-pink flex-shrink-0 mt-0.5">
-                      <FaBriefcase size={14} />
-                    </div>
-                    <div>
-                      <h3 className="font-orbitron font-bold text-white text-base tracking-wide leading-snug">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs text-neon-pink font-semibold mt-0.5">{item.organization}</p>
-                    </div>
+                {/* Glowing Top Border Edge */}
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-neon-pink via-neon-purple to-transparent opacity-30 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Top Header: Icon & Duration */}
+                <div className="flex justify-between items-start mb-5 relative z-10 w-full">
+                  <div className="w-10 h-10 rounded-xl bg-neon-pink/10 border border-neon-pink/25 flex justify-center items-center text-neon-pink shadow-[0_0_15px_rgba(254,8,181,0.1)] group-hover:scale-110 transition-transform duration-300">
+                    <FaBriefcase size={16} />
                   </div>
-                  <span className="font-orbitron text-[10px] text-[#5c5770] tracking-wider whitespace-nowrap bg-white/2 border border-white/5 px-3 py-1 rounded-full self-start">
+
+                  {/* Duration Badge */}
+                  <span className="font-orbitron text-[9px] text-neon-pink font-bold tracking-widest bg-neon-pink/5 border border-neon-pink/20 px-3 py-1.5 rounded-full flex items-center gap-1 shadow-[inset_0_0_8px_rgba(254,8,181,0.05)]">
+                    <span className="w-1 h-1 rounded-full bg-neon-pink animate-pulse" />
                     {item.duration}
                   </span>
                 </div>
 
-                <p className="text-xs text-[#8b85a3] leading-relaxed mb-4 pl-12">
+                {/* Title & Organization */}
+                <div className="mb-4 relative z-10">
+                  <h3 className="font-orbitron font-extrabold text-white text-base tracking-wide leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs font-semibold text-neon-pink tracking-wider mt-1">{item.organization}</p>
+                </div>
+
+                {/* Description */}
+                <p className="text-xs text-slate-300 leading-relaxed mb-6 flex-grow relative z-10">
                   {item.desc}
                 </p>
 
                 {/* Skill tags */}
-                <div className="flex flex-wrap gap-2 pl-12">
+                <div className="flex flex-wrap gap-1.5 border-t border-white/5 pt-4 mt-auto relative z-10">
                   {item.tags.map((tag, tIndex) => (
                     <span
                       key={tIndex}
-                      className="font-orbitron text-[8px] tracking-wider text-neon-pink bg-neon-pink/5 border border-neon-pink/15 px-2 py-0.5 rounded-md"
+                      className="font-orbitron text-[8px] font-bold tracking-widest uppercase text-slate-300 hover:text-white bg-white/2 border border-white/10 hover:border-neon-pink/40 hover:bg-neon-pink/5 px-2 py-0.5 rounded-full transition-all duration-300 cursor-default shadow-sm"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-              </div>
+              </GlowCard>
             </motion.div>
           ))}
         </div>
