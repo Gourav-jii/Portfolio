@@ -84,7 +84,7 @@ const Hero = () => {
           {/* Action Buttons */}
           <div className="flex gap-4 mb-8">
             <a
-              href="/resume/Gourav_Swarnkar_Resume.pdf"
+              href="/resume/Gourav_Swarnkar_Resume.pdf?v=2"
               download="Gourav_Swarnkar_Resume.pdf"
               className="px-8 py-3.5 rounded-full bg-neon-purple text-white font-orbitron text-xs font-semibold tracking-wider hover:bg-transparent hover:text-neon-cyan border border-neon-purple hover:border-neon-cyan hover:shadow-cyan-glow transition-all duration-300 flex items-center justify-center clickable"
             >
