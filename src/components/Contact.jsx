@@ -222,7 +222,7 @@ const Contact = () => {
             <div className="flex gap-4">
               {[
                 { icon: <FaLinkedinIn size={16} />, url: 'https://linkedin.com' },
-                { icon: <FaGithub size={16} />, url: 'https://github.com' },
+                { icon: <FaGithub size={16} />, url: 'https://github.com/Gourav-jii' },
                 { icon: <FaInstagram size={16} />, url: 'https://instagram.com' }
               ].map((social, index) => (
                 <a

@@ -76,7 +76,7 @@ const Navbar = () => {
       
       {/* Desktop Github Button */}
       <a 
-        href="https://github.com" 
+        href="https://github.com/Gourav-jii" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="hidden md:flex font-orbitron text-xs font-semibold tracking-wider text-white px-5 py-2.5 rounded-full border border-neon-purple hover:border-neon-cyan hover:bg-neon-cyan/5 hover:text-neon-cyan hover:shadow-cyan-glow transition-all duration-300 clickable"
@@ -121,7 +121,7 @@ const Navbar = () => {
             </div>
 
             <a 
-              href="https://github.com" 
+              href="https://github.com/Gourav-jii" 
               target="_blank" 
               rel="noopener noreferrer" 
               onClick={() => setIsOpen(false)}

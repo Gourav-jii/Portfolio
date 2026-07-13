@@ -102,7 +102,7 @@ const Hero = () => {
           <div className="flex gap-4">
             {[
               { icon: <FaLinkedinIn size={18} />, url: 'https://linkedin.com' },
-              { icon: <FaGithub size={18} />, url: 'https://github.com' },
+              { icon: <FaGithub size={18} />, url: 'https://github.com/Gourav-jii' },
               { icon: <FaInstagram size={18} />, url: 'https://instagram.com' },
               { icon: <FaEnvelope size={18} />, url: 'mailto:swarnkargourav123@gmail.com' }
             ].map((social, index) => (
