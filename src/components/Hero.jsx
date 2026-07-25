@@ -39,17 +39,7 @@ const useTyping = (words, typingSpeed = 100, deletingSpeed = 50, pauseTime = 150
 const Hero = () => {
   const words = ["Full Stack Developer", "MERN Stack Developer", "AI Enthusiast"];
   const typedText = useTyping(words);
-  const [hasProfilePic, setHasProfilePic] = useState(false);
-
-
-
-  // Check if profile.png exists in the public directory
-  useEffect(() => {
-    const img = new Image();
-    img.src = '/profile.png';
-    img.onload = () => setHasProfilePic(true);
-    img.onerror = () => setHasProfilePic(false);
-  }, []);
+  const [hasProfilePic, setHasProfilePic] = useState(true);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center px-[6%] pt-28 md:pt-20 overflow-hidden bg-space-dark">
@@ -132,6 +122,7 @@ const Hero = () => {
                 <img
                   src="/profile.png"
                   alt="Gourav Swarnkar Profile"
+                  onError={() => setHasProfilePic(false)}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                 />
               ) : (
