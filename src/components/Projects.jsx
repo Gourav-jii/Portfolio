@@ -51,6 +51,21 @@ const Projects = () => {
       demoBtn: 'bg-neon-pink hover:bg-transparent text-white hover:text-neon-pink border border-neon-pink hover:border-neon-pink hover:shadow-pink-glow',
     },
     {
+      title: 'CEC PYQ Hub',
+      desc: 'An academic question paper repository built for Chaibasa Engineering College (CEC, JUT Ranchi) students. Enables seamless discovery, 1-click PDF downloads, branch/semester filters, and student-driven paper contributions.',
+      features: ['JUT Exam Papers (End-Sem & Mid-Sem)', 'Branch & Semester-wise Multi-Filter Engine', 'Instant 1-Click PDF Downloads & Previews', 'Student Upload Hub with Google Auth & Cloudinary'],
+      badges: ['React', 'Node.js', 'Express', 'MongoDB Atlas', 'Cloudinary', 'Vercel'],
+      github: 'https://github.com/Gourav-jii/cec-pyq-hub',
+      demo: 'https://cec-pyq-hub.vercel.app/',
+      image: '/cec-pyq-hub.png',
+      glowColor: 'rgba(59, 130, 246, 0.22)',
+      accentGrad: 'from-blue-500 via-[#00f2fe]/50 to-transparent',
+      dotBg: 'bg-blue-400 shadow-[0_0_8px_rgba(59,130,246,0.6)]',
+      titleHover: 'group-hover:text-blue-400',
+      githubBtn: 'border-white/10 hover:border-blue-400 hover:text-blue-400 hover:shadow-cyan-glow text-white/70 bg-white/2 hover:bg-blue-400/5',
+      demoBtn: 'bg-blue-600 hover:bg-transparent text-white hover:text-blue-400 border border-blue-600 hover:border-blue-400 hover:shadow-cyan-glow',
+    },
+    {
       title: 'Creative Space Portfolio',
       desc: 'A premium, interactive personal portfolio website designed with custom scrolling starfield constellations, dynamic mouse-tracking 3D glow cards, and macOS-style app windows. Fully optimized with structured SEO schemas.',
       features: ['Interactive Starfield Constellations', '3D Mouse-Tracking Glow Effects', 'macOS-style App Window Mockups', 'Fully Indexed SEO Setup & Site Map'],
@@ -95,7 +110,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="w-full max-w-md"
+              className={`w-full max-w-md ${index === projects.length - 1 && projects.length % 2 !== 0 ? 'md:col-span-2' : ''}`}
             >
               <GlowCard
                 glowColor={project.glowColor}
