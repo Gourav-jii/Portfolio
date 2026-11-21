@@ -6,6 +6,27 @@ import GlowCard from './GlowCard';
 const Projects = () => {
   const projects = [
     {
+      title: 'J.A.R.V.I.S - Iron Man AI Desktop Assistant',
+      desc: 'A futuristic voice-controlled AI desktop assistant inspired by Iron Man. Built with Python and PyQt6, featuring an animated Arc Reactor HUD, offline faster-whisper speech recognition with native Hinglish understanding, automated WhatsApp/Telegram messaging, and multi-provider LLM intelligence (Groq 120B, Gemini, DeepSeek).',
+      features: [
+        'Iron Man Sci-Fi HUD & Animated Arc Reactor Visualizer',
+        'Real-time Hinglish & Offline Voice Recognition (Whisper + EdgeTTS)',
+        'Desktop & Messaging Automation (WhatsApp, Telegram, App Launcher)',
+        'Multi-LLM Brain Integration (Groq 120B, Gemini, DeepSeek, Local Ollama)',
+        'Mobile Remote Control via Encrypted FastAPI WebSocket Server'
+      ],
+      badges: ['Python', 'PyQt6', 'faster-whisper', 'Groq API', 'Gemini API', 'EdgeTTS', 'FastAPI', 'PyAutoGUI'],
+      github: 'https://github.com/Gourav-jii/Jarvis-Personal-Assistant',
+      demo: 'https://github.com/Gourav-jii/Jarvis-Personal-Assistant',
+      image: '/jarvis-hud.png',
+      glowColor: 'rgba(0, 242, 254, 0.22)',
+      accentGrad: 'from-neon-cyan via-[#00f2fe]/40 to-transparent',
+      dotBg: 'bg-neon-cyan shadow-[0_0_8px_rgba(0,242,254,0.6)]',
+      titleHover: 'group-hover:text-neon-cyan',
+      githubBtn: 'border-white/10 hover:border-neon-cyan hover:text-neon-cyan hover:shadow-cyan-glow text-white/70 bg-white/2 hover:bg-neon-cyan/5',
+      demoBtn: 'bg-neon-cyan hover:bg-transparent text-space-dark hover:text-neon-cyan border border-neon-cyan hover:border-neon-cyan hover:shadow-cyan-glow',
+    },
+    {
       title: 'AI Interview Agent',
       desc: 'I built a production-ready AI Interview Agent using the MERN Stack. This project teaches real-world SaaS architecture, backend structuring, authentication, payments integration, and production deployment.',
       features: ['AI Interview Simulator', 'Speech Analysis & Transcription', 'MERN Stack Architecture', 'Scalable Candidate Dashboard'],
